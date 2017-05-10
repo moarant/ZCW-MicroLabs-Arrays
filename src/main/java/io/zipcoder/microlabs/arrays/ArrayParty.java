@@ -34,12 +34,12 @@ public class ArrayParty {
         return secondToLast;
     }
 
-    //TODO Define the method reverse
+
     public String reverse(String[] inputArray) {
         String output = "*** Output ***\n";
         String[] reversedList = new String[inputArray.length];
         String filledList= "";
-        
+
 
         for(int i=0; i<inputArray.length;i++){
             reversedList[i]= inputArray[i];
@@ -61,6 +61,28 @@ public class ArrayParty {
 
 
     //TODO Define the method isPalindrome
+
+    public Boolean isPalindrome(String[] array1){
+        String[] newArray= new String[array1.length];
+        boolean isSame= false;
+
+        for(int i=0;i<array1.length;i++){
+            for(int j=array1.length-1;-1<j;j--){
+                newArray[i]= array1[j];
+            }
+            if (newArray[i]== array1[i]){
+                isSame=true;
+            }
+            else{
+                isSame=false;
+            }
+
+        }
+
+
+
+        return isSame;
+    }
 
     //TODO Define the method compress
 

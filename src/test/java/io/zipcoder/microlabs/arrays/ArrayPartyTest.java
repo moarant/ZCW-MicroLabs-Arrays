@@ -66,6 +66,27 @@ public class ArrayPartyTest {
 
     //TODO Define the method isPalindromeTest
 
+    @Test
+    public void isPalindromeTrueTest() {
+
+        //:Given
+        String[] palindromic = {"Sausage", "Eggs", "Beans", "Bacon", "Eggs", "Sausage"};
+        String[] breakfast = {"Sausage", "Eggs", "Beans", "Bacon", "Tomatoes", "Mushrooms"};
+        ArrayParty arrayParty = new ArrayParty();
+        boolean expected1= true;
+        boolean expected2=false;
+
+        //:When
+        Boolean actual1 = arrayParty.isPalindrome(palindromic);
+        Boolean actual2= arrayParty.isPalindrome(breakfast);
+        //:Then
+        Assert.assertTrue("Should return true", actual1);
+        Assert.assertFalse("Should return false",actual2);
+
+    }
+
+
+
     //TODO Define the method compressTest
 
     //TODO Define the method packTest
