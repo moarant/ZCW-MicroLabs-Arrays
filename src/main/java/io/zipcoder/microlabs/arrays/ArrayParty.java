@@ -39,23 +39,18 @@ public class ArrayParty {
         String output = "*** Output ***\n";
         String[] reversedList = new String[inputArray.length];
         String filledList= "";
-
-//        for (int i = inputArray.length - 1; i >= 0; i--) {//inputArray.length =6  i=5=inputArray.length
-//            reversedList[i] = inputArray[i];
-//            //System.out.println(reversedList[i]);
-//
-//        }
+        
 
         for(int i=0; i<inputArray.length;i++){
             reversedList[i]= inputArray[i];
         }
 
         for (int i =reversedList.length-1; i>=0; i--) {
-            if (i==0){
-                filledList+=reversedList[i];
+            if (i>0){
+                filledList+=reversedList [i]+ "\n" ;
             }
             else{
-                filledList+=reversedList [i]+ "\n" ;
+                filledList+=reversedList[i];
             }
 
         }
