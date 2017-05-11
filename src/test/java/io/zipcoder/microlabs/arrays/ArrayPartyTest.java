@@ -2,6 +2,9 @@ package io.zipcoder.microlabs.arrays;
 
 import org.junit.Assert;
 import org.junit.Test;
+import java.util.*;
+
+import java.util.Arrays;
 
 public class ArrayPartyTest {
 
@@ -91,20 +94,18 @@ public class ArrayPartyTest {
     @Test
     public void compressTest(){
      //:Given
-     String [] nums ={"1"+"1"+"3"+"3"+"3"+"2"+"2"+"2"+"1"+"1"+"1"+
-             "1"+"4"+"4"+"4"+"4"};
+       String[] inputArray= {"1","1","3","3","3","2","2","2","1","1","1",
+             "1","4","4","4","4"};
      ArrayParty arrayParty= new ArrayParty();
      String expected= "*** Output ***\n"+
              "1\n"+
              "3\n"+
              "2\n"+
              "1\n"+
-             "4\n";
-
-
+             "4";
 
      //:When
-    String actual = arrayParty.compress(nums);
+    String actual = arrayParty.compress(inputArray);
 
      //:Then
         Assert.assertEquals("The lists should match", expected, actual);

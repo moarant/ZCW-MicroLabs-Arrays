@@ -1,6 +1,9 @@
 package io.zipcoder.microlabs.arrays;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ArrayParty {
 
     public String printArray(String[] inputArray) {
@@ -83,6 +86,19 @@ public class ArrayParty {
     }
 
     //TODO Define the method compress
+    public String compress(String[] inputArray){
+        String output= "*** Output ***";
+
+
+        for(int i=0; i<inputArray.length-1;i++){
+            if(inputArray[i]!=inputArray[i+1]){
+                output+="\n" +inputArray[i];
+            }
+        }
+        output+="\n" +inputArray[inputArray.length-1];
+        return output;
+}
+
 
     //TODO Define the method pack
 
