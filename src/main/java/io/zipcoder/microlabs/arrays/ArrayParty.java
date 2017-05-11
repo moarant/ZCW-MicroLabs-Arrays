@@ -101,6 +101,19 @@ public class ArrayParty {
 
 
     //TODO Define the method pack
+    public String pack(char[] inputArray){
+       String output= "*** Output ***\n";
+       String marry= String.valueOf(inputArray[0]);
 
+       for(int i=1; i<inputArray.length;i++){
+           if(inputArray[i]==inputArray[i-1]){
+               marry+= String.valueOf(inputArray[i]);
+           }
+           else{
+               marry+=", "+String.valueOf(inputArray[i]);
+           }
+       }
+        return output + marry;
+    }
 
 }
