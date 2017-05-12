@@ -1,7 +1,10 @@
 package io.zipcoder.microlabs.arrays;
 
 
+import com.sun.deploy.util.StringUtils;
+
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class ArrayParty {
@@ -40,50 +43,33 @@ public class ArrayParty {
 
     public String reverse(String[] inputArray) {
         String output = "*** Output ***\n";
-        String[] reversedList = new String[inputArray.length];
-        String filledList= "";
+        String filledList = "";
 
-
-        for(int i=0; i<inputArray.length;i++){
-            reversedList[i]= inputArray[i];
-        }
-
-        for (int i =reversedList.length-1; i>=0; i--) {
-            if (i>0){
-                filledList+=reversedList [i]+ "\n" ;
+        for (int i = inputArray.length - 1; i >= 0; i--) {
+            {
+                filledList += inputArray[i];
+                if (i > 0) {
+                    filledList += "\n";
+                }
             }
-            else{
-                filledList+=reversedList[i];
-            }
-
         }
-
-
         return output + filledList;
     }
 
 
     //TODO Define the method isPalindrome
-
-    public Boolean isPalindrome(String[] array1){
-        String[] newArray= new String[array1.length];
-        boolean isSame= false;
-
-        for(int i=0;i<array1.length;i++){
-            for(int j=array1.length-1;-1<j;j--){
-                newArray[i]= array1[j];
+    public Boolean isPalindrome(String[] array1) {
+        for (int i = 0; i < array1.length; i++) {
+            int back = array1.length - (i + 1);
+            if (array1[i] != array1[back]) {
+                 return false;
             }
-            if (newArray[i]== array1[i]){
-                isSame=true;
-            }
-            else{
-                isSame=false;
-            }
-
         }
-
-        return isSame;
+        return true;
     }
+
+
+
 
     //TODO Define the method compress
     public String compress(String[] inputArray){
@@ -113,7 +99,10 @@ public class ArrayParty {
                combinedSameLetters+=", "+String.valueOf(inputArray[i]);
            }
        }
-        return output + combinedSameLetters;
+        List<String> list = new ArrayList<String>(Arrays.asList(combinedSameLetters.split(" , ")));
+        
+
+       return output + StringUtils.join(list, "");
     }
 
 }

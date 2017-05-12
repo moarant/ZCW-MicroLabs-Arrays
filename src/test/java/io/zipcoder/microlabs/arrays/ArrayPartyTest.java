@@ -73,7 +73,7 @@ public class ArrayPartyTest {
     public void isPalindromeTrueTest() {
 
         //:Given
-        String[] palindromic = {"Sausage", "Eggs", "Beans", "Bacon", "Eggs", "Sausage"};
+        String[] palindromic = {"Sausage", "Eggs", "Beans", "Beans", "Eggs", "Sausage"};
         String[] breakfast = {"Sausage", "Eggs", "Beans", "Bacon", "Tomatoes", "Mushrooms"};
         ArrayParty arrayParty = new ArrayParty();
         boolean expected1= true;
