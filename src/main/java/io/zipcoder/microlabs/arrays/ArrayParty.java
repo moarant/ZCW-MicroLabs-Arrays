@@ -10,14 +10,13 @@ import java.util.List;
 public class ArrayParty {
 
     public String printArray(String[] inputArray) {
-        String output = "*** Output ***\n";
+        String output = "*** Output ***";
         String filledList = "";
         for (int i = 0; i < inputArray.length; i++) {
-            if (i < (inputArray.length - 1)) {
-                filledList += inputArray[i] + "\n";
-            } else {
-                filledList += inputArray[i];
+            if (i < (inputArray.length)) {
+                filledList += "\n" + inputArray[i];
             }
+
         }
         return output + filledList;
     }
@@ -26,7 +25,7 @@ public class ArrayParty {
 
         String lastNumber = "*** Output ***\n" + inputArray[inputArray.length - 1];
 
-        System.out.println(lastNumber);
+
 
 
         return lastNumber;
@@ -35,7 +34,6 @@ public class ArrayParty {
 
     public String lastButOne(String[] inputArray) {
         String secondToLast = "*** Output ***\n" + inputArray[inputArray.length - 2];
-        System.out.println(secondToLast);
 
         return secondToLast;
     }
@@ -59,7 +57,7 @@ public class ArrayParty {
 
     //TODO Define the method isPalindrome
     public Boolean isPalindrome(String[] array1) {
-        for (int i = 0; i < array1.length; i++) {
+        for (int i = 0; i < (array1.length/2); i++) {
             int back = array1.length - (i + 1);
             if (array1[i] != array1[back]) {
                  return false;
@@ -99,8 +97,8 @@ public class ArrayParty {
                combinedSameLetters+=", "+String.valueOf(inputArray[i]);
            }
        }
-        List<String> list = new ArrayList<String>(Arrays.asList(combinedSameLetters.split(" , ")));
-        
+        List<String> list = new ArrayList<String>(Arrays.asList(combinedSameLetters.split("")));
+
 
        return output + StringUtils.join(list, "");
     }

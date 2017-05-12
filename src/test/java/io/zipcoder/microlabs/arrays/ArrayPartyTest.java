@@ -25,7 +25,7 @@ public class ArrayPartyTest {
         String actual = arrayParty.printArray(breakfast);
 
         //: Then
-        Assert.assertEquals("The two string outputs are equal", expected, actual);
+        Assert.assertEquals("Should produce an exact copy of original string", expected, actual);
     }
 
     @Test
@@ -37,7 +37,7 @@ public class ArrayPartyTest {
         //: When
         String actual = arrayParty.lastElement(breakfast);
         //: Then
-        Assert.assertEquals("The output of the method should be same", expected, actual);
+        Assert.assertEquals("Should return the last item in the original array", expected, actual);
     }
 
     //TODO Define the method lastButOneTest
@@ -50,7 +50,7 @@ public class ArrayPartyTest {
         //: When
         String actual = arrayParty.lastButOne(breakfast);
         //: Then
-        Assert.assertEquals("The output of the method should be same", expected, actual);
+        Assert.assertEquals("Should return the second to last item of the original array", expected, actual);
     }
 
     //TODO Define the method reverseTest
@@ -64,7 +64,7 @@ public class ArrayPartyTest {
         //:When
         String actual = arrayParty.reverse(breakfast);
         //:Then
-        Assert.assertEquals("The output of the method should be the same", expected, actual);
+        Assert.assertEquals("Should return the list in reverse order", expected, actual);
     }
 
     //TODO Define the method isPalindromeTest
@@ -76,15 +76,14 @@ public class ArrayPartyTest {
         String[] palindromic = {"Sausage", "Eggs", "Beans", "Beans", "Eggs", "Sausage"};
         String[] breakfast = {"Sausage", "Eggs", "Beans", "Bacon", "Tomatoes", "Mushrooms"};
         ArrayParty arrayParty = new ArrayParty();
-        boolean expected1= true;
-        boolean expected2=false;
+
 
         //:When
         Boolean actual1 = arrayParty.isPalindrome(palindromic);
         Boolean actual2= arrayParty.isPalindrome(breakfast);
         //:Then
-        Assert.assertTrue("Should return true", actual1);
-        Assert.assertFalse("Should return false",actual2);
+        Assert.assertTrue("Should return true if the array is a palindrome", actual1);
+        Assert.assertFalse("Should return false if the string is not a palindrome",actual2);
 
     }
 
@@ -108,7 +107,7 @@ public class ArrayPartyTest {
     String actual = arrayParty.compress(inputArray);
 
      //:Then
-        Assert.assertEquals("The lists should match", expected, actual);
+        Assert.assertEquals("Should return one of each item if listed consecutively", expected, actual);
     }
 
     //TODO Define the method packTest
@@ -124,7 +123,7 @@ public class ArrayPartyTest {
         String actual = arrayParty.pack(letters);
 
         //:Then
-        Assert.assertEquals("The lists should match", expected, actual);
+        Assert.assertEquals("Should return an array with similar letters together", expected, actual);
     }
 
 
